@@ -1,0 +1,69 @@
+.navbar {
+	height: 80px;
+	background-color: rgb(25,25,25);
+}
+
+.navbar-left-1 {
+	float: left;
+	//centre les enfants
+	display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    //taille
+    width: 125px;
+	height: 80px;
+}
+
+.btn-accueil {
+	//centre horizontal
+	margin: 0 auto;
+	//centre les enfants
+	text-align: center;
+	display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    //taille
+	height: 50px;
+	width: 50px;
+}
+
+.fa {
+	font-size: 40px;
+	color: rgb(249,249,249);
+}
+
+.navbar-left-2 {
+	//position
+	float: left;
+	margin-top: 25px;
+    //taille
+    width: 20px;
+	height: 30px;
+	//border
+	border-left: 1.5px solid rgb(70,70,70);
+}
+
+.navbar-left-3 {
+	//position
+	float: left;
+	//taille
+	width: 35%;
+	height: 80px;
+}
+
+.navbar-right-1 {
+	//position
+	float: right;
+	//taille
+	width: 60px;
+	height: 80px;
+}
+
+.navbar-right-2 {
+	//position
+	float: right;
+	margin-right: 30px;
+	//taille
+	width: 35%;
+	height: 80px;
+}
