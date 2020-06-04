@@ -3,7 +3,9 @@
 	background-color: rgb(25,25,25);
 }
 
-.navbar-left-1 {
+//------------------------------------
+
+.navbar-accueil {
 	float: left;
 	//centre les enfants
 	display: flex;
@@ -17,7 +19,7 @@
 .btn-accueil {
 	//centre horizontal
 	margin: 0 auto;
-	//centre les enfants
+	//centre les enfants (horiz + verti)
 	text-align: center;
 	display: flex; 
     flex-direction: column;
@@ -32,7 +34,9 @@
 	color: rgb(249,249,249);
 }
 
-.navbar-left-2 {
+//------------------------------------
+
+.navbar-line {
 	//position
 	float: left;
 	margin-top: 25px;
@@ -43,27 +47,70 @@
 	border-left: 1.5px solid rgb(70,70,70);
 }
 
-.navbar-left-3 {
+//------------------------------------
+
+.navbar-section {
+	//position
+	float: left;
+	//centre les enfants
+	display: flex;
+    flex-direction: column; 
+    justify-content: center;
+	//taille
+	width: 37%;
+	height: 80px;
+}
+
+.btn-section {
+	//centre horizontal
+	margin: 0 auto;
+	//centre les enfants (horiz + verti)
+	text-align: center;
+	display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    //taille
+    width: 240px;
+	height: 50px;
+}
+
+.section {
+	//style
+	font-family: 'FF_Mark';
+	color: rgb(249,249,249);
+	letter-spacing: 0.8px;
+	font-size: 13px;
+	//centre vertical
+	margin: 0 auto;
+	
+}
+
+//------------------------------------
+
+.navbar-separator {
+	//centre les enfants
+	display: flex; 
+    flex-direction: column;
+    justify-content: center;
 	//position
 	float: left;
 	//taille
-	width: 35%;
+	width: 90px;
 	height: 80px;
 }
 
-.navbar-right-1 {
-	//position
-	float: right;
-	//taille
-	width: 60px;
-	height: 80px;
+.logo {
+	width: 90px;
 }
 
-.navbar-right-2 {
-	//position
-	float: right;
-	margin-right: 30px;
-	//taille
-	width: 35%;
-	height: 80px;
+//------------------------------------
+
+.pro {
+	text-shadow : 0 0 5px rgb(25,25,25), 0 0 10px rgb(255,80,1), 0 0 25px rgb(255,80,1), 0 0 75px rgb(255,80,1);
+	-webkit-text-stroke: .2px black;
+}
+
+.perso {
+	text-shadow : 0 0 5px rgb(25,25,25), 0 0 10px rgb(33,109,252), 0 0 25px rgb(33,109,252), 0 0 75px rgb(33,109,252);
+	-webkit-text-stroke: .2px black;
 }
