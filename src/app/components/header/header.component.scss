@@ -57,9 +57,8 @@
 	float: left;
 	margin-top: 25px;
     //taille
-    width: 20px;
 	height: 30px;
-	//border
+	//apparence
 	border-left: 1.5px solid rgb(70,70,70);
 }
 
@@ -86,7 +85,7 @@
     flex-direction: column;
     justify-content: center;
     //taille
-    width: 240px;
+    width: 300px;
 	height: 80px;
 	//curseur
 	cursor: pointer;
@@ -96,30 +95,59 @@
 	//style
 	font-family: 'FF_Mark';
 	color: rgb(249,249,249);
-	letter-spacing: 0.8px;
-	font-size: 13px;
+	letter-spacing: 1.5px;
+	font-size: 14px;
 	//centre vertical
 	margin: 0 auto;
 	
 }
 
+@media (max-width: 850px)  {
+	.navbar-section {
+		display: none;
+	}
+	.btn-section {
+		display: none;
+		width: 0px;
+	}
+	#btn-section-pro{
+		width: 0px;
+	}
+	#btn-section-perso{
+		width: 0px;
+	}
+	.section {
+		display: none;
+	}
+}
+
 //----- SÉPARATEUR DES SECTIONS -----
 
 .navbar-separator {
-	//centre les enfants
-	display: flex; 
-    flex-direction: column;
-    justify-content: center;
+	//position horizontal de l'enfant
+    text-align: center;
 	//position
 	float: left;
 	//taille
-	width: 90px;
+	width: 10%;
 	height: 80px;
 }
 
 .logo {
 	width: 90px;
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
 }
+
+@media (max-width: 850px)  {
+	.navbar-separator {
+		//taille
+		height: 80px;
+		width: calc(100% - 127px);
+	}
+}
+
 
 //----- SECTIONS PRO ET PERSO -----
 
@@ -157,30 +185,89 @@
 	//ombre au dessus
 	z-index:-1;
 	//position
-	margin-top: 0px;
+	margin-top: 80px;
 	margin-right: 40px;
 	margin-left: 40px;
 }
 
 .triangle-gauche {
+	//position
 	float: left;
+	//taille
 	border-top: 50px solid rgb(25,25,25);
 	border-left: 30px solid transparent;
-	width: 5%;
 }
 
 .triangle-droite {
+	//position
 	float: right;
+	//taille
 	border-top: 50px solid rgb(25,25,25);
 	border-right: 30px solid transparent;
-	width: 5%;
 }
 
 .centre {
+	//position
 	float: left;
+	//taille
 	height: 50px;
-	width: 90%;
+	width: calc(100% - 60px);
+	//apparence
 	background-color: rgb(25,25,25);
-	color: "white";
+	border-bottom: 3px solid rgb(75,75,75);
 }
 
+
+//----- CONTENU DES SOUS-BARRES -----
+
+.btn-lien {
+	//taille
+	width: calc((100% - (4*52px))/5);
+	height: 50px;
+	//position
+	float: left;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	//style
+	font-family: 'FF_Mark_Thin';
+	color: rgb(240,240,240);
+	letter-spacing: 2.5px;
+	font-size: 11px;
+	font-weight: bold;
+	//bordure de sous sous-navbar
+	border-bottom: 3px solid rgb(75,75,75);
+	//curseur
+	cursor: pointer;
+}
+
+.lien {
+	//centrer le texte dans les cases
+	text-align: center;
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.navbar-line2 {
+	//position
+	float: left;
+	//taille
+	height: 20px;
+	margin-top: 15px;
+	margin-bottom: 15px;
+	margin-left: 25px;
+	margin-right: 25px;
+	//apparence
+	border-left: 1px solid rgb(70,70,70);
+}
+
+
+//----- CATEGORIES PRO ET PERSO -----
+
+.btn-lien-pro:hover {
+	border-bottom: 3px solid rgb(30,120,255);
+}
+
+.btn-lien-perso:hover {
+	border-bottom: 3px solid rgb(255,120,30);
+}
