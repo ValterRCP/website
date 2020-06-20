@@ -36,12 +36,14 @@
 	width: 50px;
 	//curseur
 	cursor: pointer;
+	//retirer contour de clic
+	outline: none;
 }
 
 .fa {
 	font-size: 40px;
 	color: rgb(249,249,249);
-	transition: all 0.3s ease-out;
+	transition: text-shadow 0.3s ease-out;
 }
 
 .btn-accueil:hover {
@@ -89,6 +91,8 @@
 	height: 80px;
 	//curseur
 	cursor: pointer;
+	//retirer contour de clic
+	outline: none;
 }
 
 .section {
@@ -99,7 +103,6 @@
 	font-size: 14px;
 	//centre vertical
 	margin: 0 auto;
-	
 }
 
 @media (max-width: 850px)  {
@@ -185,7 +188,7 @@
 	//ombre au dessus
 	z-index:-1;
 	//position
-	margin-top: 80px;
+	margin-top: 0px;
 	margin-right: 40px;
 	margin-left: 40px;
 }
@@ -238,6 +241,8 @@
 	border-bottom: 3px solid rgb(75,75,75);
 	//curseur
 	cursor: pointer;
+	//retirer contour de clic
+	outline: none;
 }
 
 .lien {
@@ -269,5 +274,5 @@
 }
 
 .btn-lien-perso:hover {
-	border-bottom: 3px solid rgb(255,120,30);
+	border-bottom: 3px solid rgb(200,100,20);
 }

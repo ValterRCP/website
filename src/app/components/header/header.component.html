@@ -1,7 +1,9 @@
 <nav id="navbar-main" class="navbar navbar-fixed-top">
 
 	<div class="navbar-accueil">
-		<div class="btn-accueil">
+		<div class="btn-accueil" 
+			 routerLinkActive="active" routerLink="" 
+			 (click)="onClickLien('home')">
 			<i class="fa fa-home"></i>
 		</div>
 	</div>
@@ -9,7 +11,9 @@
 	<div class="navbar-line"></div>
 
 	<div class="navbar-section">
-		<div id="btn-section-pro" class="btn-section">
+		<div id="btn-section-pro" class="btn-section" 
+			 routerLinkActive="active" routerLink="professionnel" 
+			 (click)="onClickLien('pro')">
 			<p id="pro" class="section">SECTION PROFESSIONNELLE</p>
 		</div>
 	</div>
@@ -19,7 +23,9 @@
 	</div>
 
 	<div class="navbar-section">
-		<div id="btn-section-perso" class="btn-section">
+		<div id="btn-section-perso" class="btn-section" 
+			 routerLinkActive="active" routerLink="personnel" 
+			 (click)="onClickLien('perso')">
 			<p id="perso" class="section">SECTION PERSONNELLE</p>
 		</div>
 	</div>
@@ -63,23 +69,23 @@
 
 	<div class="centre">
 
-		<div id="btn-cv" class="btn-lien btn-lien-pro">
+		<div id="btn-cv" class="btn-lien btn-lien-pro" routerLinkActive="active" routerLink="cv">
 			<p class="lien">CV</p>
 		</div>
 		<div class="navbar-line2"></div>
-		<div id="btn-formation" class="btn-lien btn-lien-pro">
+		<div id="btn-formation" class="btn-lien btn-lien-pro" routerLinkActive="active" routerLink="formation">
 			<p class="lien">FORMATION</p>
 		</div>
 		<div class="navbar-line2"></div>
-		<div id="btn-exp" class="btn-lien btn-lien-pro">
+		<div id="btn-exp" class="btn-lien btn-lien-pro" routerLinkActive="active" routerLink="experiences">
 			<p class="lien">EXPERIENCES</p>
 		</div>
 		<div class="navbar-line2"></div>
-		<div id="btn-savoir" class="btn-lien btn-lien-pro">
+		<div id="btn-savoir" class="btn-lien btn-lien-pro" routerLinkActive="active" routerLink="savoir-faire">
 			<p class="lien">SAVOIR-FAIRE</p>
 		</div>
 		<div class="navbar-line2"></div>
-		<div id="btn-projet" class="btn-lien btn-lien-pro">
+		<div id="btn-projet" class="btn-lien btn-lien-pro" routerLinkActive="active" routerLink="projets">
 			<p class="lien">PROJETS</p>
 		</div>
 
