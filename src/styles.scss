@@ -1,11 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
 
 @font-face {
-	font-family: 'FF_Mark';
+	font-family: 'FF_Mark_Heavy';
 	src: url('/assets/font/FF_Mark_Heavy.otf');
 }
 
 @font-face {
-	font-family: 'FF_Mark_Thin';
+	font-family: 'FF_Mark';
 	src: url('/assets/font/FF_Mark_Medium.otf');
+}
+
+@font-face {
+	font-family: 'FF_Mark_Thin';
+	src: url('/assets/font/Mark-Light.otf');
 }

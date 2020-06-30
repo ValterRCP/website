@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 
-import { CookieService } from 'ngx-cookie-service';
-
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
@@ -9,11 +7,7 @@ import { CookieService } from 'ngx-cookie-service';
 })
 export class HeaderComponent implements OnInit {
 
-  ongletActif: string;
-
-  constructor(private cookieService: CookieService) { }
-
-
+  constructor() { }
 
   ngOnInit(): void {
 
@@ -78,14 +72,6 @@ export class HeaderComponent implements OnInit {
   		under_navbar_perso.style.marginTop = "0px";
     })
 
-  }
-
-
-
-onClickLien(lien: string) {
-    this.cookieService.set('ongletActif', lien);
-    this.ongletActif = lien;
-    console.log(lien);
   }
 
 }

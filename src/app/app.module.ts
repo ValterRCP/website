@@ -6,6 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 
 // Services
 import { CookieService } from 'ngx-cookie-service';
+import { UtilityService } from './services/utility.service';
 
 // Components
 import { AppComponent } from './app.component';
@@ -54,7 +55,8 @@ const appRoutes: Routes = [
     RouterModule.forRoot(appRoutes),
   ],
   providers: [
-    CookieService
+    CookieService,
+    UtilityService
   ],
   bootstrap: [AppComponent]
 })

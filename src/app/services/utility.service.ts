@@ -1,0 +1,44 @@
+import { Injectable, Inject } from '@angular/core';
+
+@Injectable()
+export class UtilityService {
+
+	// Fonction permettant de calculer les waypoints pour les tracés
+	// On récupère la liste des vertices (sommets) en argument
+	calcWaypoints(vertices){
+		// On va utiliser ces vertices pour les transformer en waypoints sur le tracé
+	    var waypoints=[];
+	    for(var i=1;i<vertices.length;i++){
+	        var pt0=vertices[i-1];
+	        var pt1=vertices[i];
+	        var dx=pt1.x-pt0.x;
+	        var dy=pt1.y-pt0.y;
+	        var taille=pt1.taille
+	        for(var j=0;j<taille;j++){
+	            var x=pt0.x+dx*j/(taille-1);
+	            var y=pt0.y+dy*j/(taille-1);
+	            waypoints.push({x:x,y:y});
+	        }
+	    }
+	    return(waypoints);
+	}
+
+
+	// Fonction permettant d'utiliser les points calculés par clacWaypoints pour effectuer les tracés
+	// On récupères les waypoints, le canevas et la frame à laquelle nous sommes pour pouvoir effectuer la récursivité
+	animate(frameElapsed,points,canevas){
+		// On vérifie si on est arrivé au bout des waypoints
+	    if(frameElapsed<points.length-1){ 
+	    	// Si ce n'est pas le cas, on redéclenche la fonction pour la frame suivante
+	    	requestAnimationFrame(()=> {
+	    		this.animate(frameElapsed+1,points,canevas);
+			}); 
+		}
+	    // On dessine le tracé pour cette frame
+	    canevas.beginPath();
+	    canevas.moveTo(points[frameElapsed-1].x,points[frameElapsed-1].y);
+	    canevas.lineTo(points[frameElapsed].x,points[frameElapsed].y);
+	    canevas.stroke();
+	}
+
+}

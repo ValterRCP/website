@@ -1,0 +1,99 @@
+//----- SECTION 1 -----
+
+.section-1 {
+	// centrer l'enfant
+	position: relative;
+	// taille
+	height : 642px;
+}
+
+.section-1-container {
+    // centrer dans la section-1
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    // taille
+    width: 75%;
+    height: 70%;
+    // contenu
+    background-color: rgb(15,15,15);
+    transition: all 0.2s ease-out;
+}
+
+.section-1-container:hover {
+	box-shadow: -4px -4px 8px rgb(125,125,125);
+	margin-top: 4px;
+	margin-left: 4px;
+	transition: all 0.2s ease-out;
+}
+
+#canvas-1 {
+	// centrer dans la section-1
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    // taille
+    width: 105%;
+    height: 95%;
+}
+
+.section-1-photo {
+	//taille
+	width: 340px;
+	height: 60%;
+	// centrer verticalement
+	position: absolute;
+	top: 50%;
+    transform: translateY(-50%);
+	border-right: 1.5px solid rgb(70,70,70);
+}
+
+#photo-1 {
+	//taille
+	width: 220px;
+	//centrer verticalement
+	position: absolute;
+	top: 50%;
+    transform: translateY(-50%);
+    margin-left: 60px;
+}
+
+#canvas-2 {
+	//taille
+	width: 240px;
+	height: 240px;
+	//centrer verticalement
+	position: absolute;
+	top: 50%;
+    transform: translateY(-50%);
+    margin-left: 50px;
+}
+
+.section-1-texte {
+	//taille
+	width: calc(84% - 340px);
+	height: 100%;
+	//position
+	float: right;
+	margin-left: 8%;
+	margin-right: 8%;
+	//style
+	font-family: 'FF_Mark_Thin';
+	color: rgb(240,240,240);
+	letter-spacing: 1.2px;
+	font-size: 14px;
+}
+
+.lien {
+	//centrer le texte dans les cases
+	margin: 0;
+	text-align: center;
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+	justify-content: center;
+}
