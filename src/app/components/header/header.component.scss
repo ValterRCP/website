@@ -193,6 +193,12 @@
 	margin-left: 40px;
 }
 
+@media (max-width: 850px)  {
+	.under-navbar {
+		display: none;
+	}
+}
+
 .triangle-gauche {
 	//position
 	float: left;
