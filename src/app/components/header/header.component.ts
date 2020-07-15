@@ -23,26 +23,26 @@ export class HeaderComponent implements OnInit {
   		navbar_main.style.boxShadow = "0 0px 7px rgb(30,120,255)";
     })
     btn_section_pro.addEventListener("mouseout", function( event ) {   
-  		navbar_main.style.boxShadow = "0 0px 7px rgb(125,125,125)";
+  		navbar_main.style.boxShadow = "0 0px 7px rgb(25,25,25)";
     })
     under_navbar_pro.addEventListener("mouseover", function( event ) {   
   		navbar_main.style.boxShadow = "0 0px 7px rgb(30,120,255)";
     })
     under_navbar_pro.addEventListener("mouseout", function( event ) {   
-  		navbar_main.style.boxShadow = "0 0px 7px rgb(125,125,125)";
+  		navbar_main.style.boxShadow = "0 0px 7px rgb(25,25,25)";
     })
 
     btn_section_perso.addEventListener("mouseover", function( event ) {   
   		navbar_main.style.boxShadow = "0 0px 7px rgb(255,80,1)";
     })
     btn_section_perso.addEventListener("mouseout", function( event ) {   
-  		navbar_main.style.boxShadow = "0 0px 7px rgb(125,125,125)";
+  		navbar_main.style.boxShadow = "0 0px 7px rgb(25,25,25)";
     })
     under_navbar_perso.addEventListener("mouseover", function( event ) {   
   		navbar_main.style.boxShadow = "0 0px 7px rgb(255,80,1)";
     })
     under_navbar_perso.addEventListener("mouseout", function( event ) {   
-  		navbar_main.style.boxShadow = "0 0px 7px rgb(125,125,125)";
+  		navbar_main.style.boxShadow = "0 0px 7px rgb(25,25,25)";
     })
 
     	// MARGIN-TOP
