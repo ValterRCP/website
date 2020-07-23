@@ -23,7 +23,7 @@
     // contenu
     background-color: rgb(15,15,15);
     transition: all 0.2s ease-out;
-    border: 1.5px solid rgba(170,130,40,0.9);
+    border: 1px solid rgba(170,130,40,1);
     //border: 2px solid rgb(125,125,125);
 }
 
@@ -97,6 +97,8 @@
 	color: rgb(240,240,240);
 	letter-spacing: 1.2px;
 	font-size: 14px;
+	//animation
+	animation: 3s revealinvert;
 }
 
 @media (max-width: 1050px)  {
@@ -139,16 +141,17 @@
 	height: 650px;
 	width: 100%;
   	//fond
-  	z-index:1;
   	background-color: rgb(25,25,25);
 }
 
-#canvas-2-1 {
+.canvas-2-1 {
 	height: 650px;
 	width: 100%;
 	margin: 0;
     position: absolute;
     z-index: 1000;
+    //hover des sections
+    pointer-events: none;
 }
 
 .section-2-container {
@@ -159,20 +162,35 @@
 
 .section-2-img-container {
 	//taille
-	height: 90%;
-	width: 45%;
+	height: 85%;
+	width: calc(50% - 110px);
 	//position
-	position: absolute;
     top: 50%;
     transform: translateY(-50%);
-	margin-left: 2.5%;
-	margin-right: 2.5%;
-	float: left;
+	margin-left: 55px;
+	margin-right: 55px;
 	overflow: hidden;
 	//centrer enfants
     position: relative;
     //style
-    border: 1.5px solid rgba(170,130,40,0.5);
+    border: 1px solid rgba(170,130,40,0.6);
+    transition: all 1.5s;
+}
+
+#section-2-pro {
+	float: left;
+}
+
+#section-2-pro:hover {
+	box-shadow: 0 0px 30px rgb(30,120,255);
+}
+
+#section-2-perso {
+	float: right;
+}
+
+#section-2-perso:hover {
+	box-shadow: 0 0px 50px rgb(255,80,1);
 }
 
 .section-2-img {
@@ -183,21 +201,120 @@
 	left: 50%;
     transform: translateX(-50%);
     //style
-    filter: contrast(70%) brightness(30%) grayscale(100%) blur(1.5px);
+    transition: all 0.7s;
 }
 
-.section-2-txt {
+#section-2-img-pro:hover {
+	//curseur
+	cursor: pointer;
+	//style
+	filter: invert(23%) sepia(70%) saturate(324%) hue-rotate(180deg) brightness(105%) contrast(200%);
+}
+
+#section-2-img-perso:hover {
+	//curseur
+	cursor: pointer;
+	//style
+	filter: invert(25%) sepia(70%) saturate(300%) hue-rotate(1deg) brightness(105%) contrast(200%);
+}
+
+.section-2-text-container {
 	//premier plan
 	position: absolute;
+	//height: 50%;
+	width: 70%;
 	//position
     margin: 0;
-    position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    //hover des sections
+    pointer-events: none;
+}
+
+.section-2-title {
 	//style
 	font-family: 'FF_Mark_Heavy';
 	color: rgb(249,249,249);
 	letter-spacing: 1.5px;
 	font-size: 75px;
+	//centrer
+	text-align: center;
+	//transition
+	margin-top: 125px;
+	transition: all 0.3s;
+}
+
+@media (max-width: 950px)  {
+	.section-2-title {
+		letter-spacing: 1px;
+		font-size: 50px;
+	}
+}
+
+@media (max-width: 700px)  {
+	.section-2-title {
+		letter-spacing: 1px;
+		font-size: 30px;
+	}
+}
+
+@media (max-width: 500px)  {
+	.section-2-title {
+		display: none;
+	}
+}
+
+#section-2-title-pro {
+	//animation
+	animation: 3s reveal;
+}
+
+#section-2-title-perso {
+	//animation
+	animation: 3s revealinvert;
+}
+
+.section-2-text {
+	//position
+	margin-top: 30px;
+	//style
+	font-family: 'FF_Mark';
+	color: rgb(210,210,210);
+	letter-spacing: 1.2px;
+	font-size: 17px;
+	text-align: justify;
+	//affichage
+	opacity: 0%;
+	//transition
+	transition: all 0.7s;
+}
+
+@media (max-width: 700px)  {
+	.section-2-text {
+		letter-spacing: 1px;
+		font-size: 13px;
+	}
+}
+
+@media (max-width: 450px)  {
+	.section-2-text {
+		display: none;
+	}
+}
+
+
+
+
+
+	//----- ANIMATIONS -----
+
+@keyframes reveal {
+    0% { clip-path: polygon(100% 100%, 100% 100%, 100% 100%); }
+    100%   { clip-path: polygon(100% 100%, -200% 100%, 100% -200%); }
+}
+
+@keyframes revealinvert {
+    0% { clip-path: polygon(0% 100%, 0% 100%, 0% 100%); }
+    100%   { clip-path: polygon(0% 100%, 200% 100%, 0% -200%); }
 }
